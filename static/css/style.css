@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
 
 html,body {
@@ -21,7 +20,7 @@ body{
 	color: black;
 	padding: 0px;
 	margin: 0px;
- 	font-family: Playfair Display,sans-serif;
+ 	font-family: Fira Code,sans-serif;
  	font-weight: 400;
  	overflow-x: hidden;
 }
@@ -67,6 +66,7 @@ body{
 }
 
 .text {
+	font-family: Ubuntu, sans-serif;
 	font-size: 1.5em;
 	font-weight: 400;
 	line-height: 1em;
@@ -92,6 +92,7 @@ body{
 	background-color: #d2ccc4;
 	display: flex;
 	color: #000;
+	z-index: 800;
 	width: 100%;
 	border-top: 5px solid rgb(0, 0, 0, 1);
 }
@@ -102,7 +103,6 @@ body{
 	display: flex;
 	color: #000;
 	cursor: pointer;
-	z-index: 800;
 	overflow: scroll;
 	-ms-overflow-style: none;  /* IE and Edge */
   	scrollbar-width: none; 
@@ -253,6 +253,7 @@ body{
 }
 
 .playlist {
+	font-family: Ubuntu, sans-serif;
 	text-align: left;
 	font-size: 0.9em;
 	max-height: 0;
@@ -291,62 +292,92 @@ body{
 }
 
 #main section{
-	margin-top: -15px;
+	margin-top: 0px;
 	padding-top: 60px;
 	padding-bottom: 100px;  
 	position: relative;
-	z-index: -1;
+	z-index: 700;
 }
 
 #about{
-	box-sizing: border-box;
-}	
+	height: auto;
+	overflow-y: auto;
+}
 
+.container {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  margin: 100px 0 100px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+	flex: 0 0 calc(100% - 112px);
+	padding: 16px;
+ 	margin: 40px;
+ 	box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
+ 	background-color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	transform: scale(0);
+	display: block;
+	animation: zoom 0.6s ease-in forwards;
+	text-decoration: none;
+	color: black;
+}
+
+.about{
+	width: 80%;
+	height: 40vh;
+	object-fit: contain;
+	object-position: center;
+	display: block;
+	margin: auto;
+}
+
+.about-text{
+	text-align: center;
+	font-family: Ubuntu, sans-serif;
+}
 #projects{
 }
 
 .skills-container{
 	width: 100%;
 	max-width: 320px;
-	display: block;
-	margin: auto;
 	margin-bottom: 150px;
-}
-
-.hex-row{
 	display: block;
-	margin: auto;
+	margin: 0 auto;
+}
+.hex-row{
 	clear: left;
 }
-
 .hex-cell{
 	float: left;
 	margin-left: 2px;
 	margin-bottom: -21px;
-	transform: scale(0);
+	cursor: pointer;
 	transition: 0.5s;
+	transform: scale(0);
 	animation: play 0.5s ease-in forwards;
 }
-
 .hex-cell:nth-child(1){
 	animation-delay: 0.6s;
 }
-
 .hex-cell:nth-child(2){
 	animation-delay: 0.45s;
 }
-
 .hex-cell:nth-child(3){
 	animation-delay: 0.30s;
 }
-
 .hex-cell:nth-child(4){
 	animation-delay: 0.15s;
 }
 
 .hex-cell .cell-top{
 	width: 0;
-	z-index: -100;
 	border-bottom: 23px solid #fff;
 	border-left: 39px solid transparent;
 	border-right: 39px solid transparent;
@@ -370,12 +401,15 @@ body{
 .skill{
 	height: auto;
 	width: 53px;
+	transition: 0.5s;
 	position: relative;
 	top: -10px;
 	font-size: 45px;
 	display: block;
 	margin: auto;
-	object-fit: contain;		
+	object-fit: contain;	
+	cursor: pointer;
+
 }
 
 .medium{
@@ -407,27 +441,17 @@ body{
 	}
 }
 
-.projects-container {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  margin: 100px 0 100px 0;
-}
-
-.project-card{
-	flex: 1 0 60vw;
-	padding: 16px;
- 	margin: 20px;
- 	box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
- 	background-color: #fff;
-	border-radius: 5px;
-	cursor: pointer;
-	display: block;
+@keyframes zoom{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
 }
 
 #reach-out{
 	height: calc(100vh - 30px);
-	pointer-events: none;	
 	overflow-y: hidden;
 }
 
@@ -469,21 +493,21 @@ body{
 }
 
 .contact-card{
-  position: relative;
-  width: 99px;
-  height: 99px;
-  margin: 1em;
-  padding: 10px;
-  border-radius: 50%;
-  background-color: white;
-  box-shadow: 0 10px 16px 0 rgba(99, 16, 49,0.5);
-  transition: 0.4s;
-  display: flex; 
-  flex-direction: vertical;
-  align-items: center;
-  justify-content: center;
-  pointer-events: auto;
-  cursor: pointer;
+	position: relative;
+	width: 99px;
+	height: 99px;
+	margin: 1em;
+	padding: 10px;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: 0 10px 16px 0 rgba(99, 16, 49,0.5);
+	transition: 0.4s;
+	display: flex; 
+	flex-direction: vertical;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	animation: zoom 0.6s ease-in;
 }
 
 .contact{
@@ -497,12 +521,8 @@ body{
 	flex-wrap: wrap;
 }
 
-.contact-card:hover .text{
-  color: rgba(255, 255, 255, 1);
-}
-
-#reach-out:hover .background{
-	background-color: #1a1a1a;
+.contact-card:hover{
+	transform: scale(1.1);
 }
 
 .center{

@@ -1,11 +1,11 @@
 let idx = 0;// to index the portfolios
-let portfolios1 = ['Software', 'Competitive', 'Software'];
+let portfolios1 = ['Software', '', 'Software'];
 let portfolios2 = ['Developer', 'Programmer', 'Engineer'];
-let fonts = ['Playfair Display', 'Indie Flower', 'Kanit','Pacifico', 'Caveat', 'Satisfy'];		
+let fonts = ['Fira Code', 'Playfair Display', 'Indie Flower', 'Kanit','Pacifico', 'Caveat', 'Satisfy', 'Ubuntu'];		
 let nav = document.getElementById('nav');
 let navTop = nav.offsetTop;
-
-
+let age = (new Date(new Date() - new Date('06/30/1999')).getFullYear() - 1970) + ' years old';
+document.getElementById('age').innerText = age;
 
 window.onscroll = function(){
 	var currentScroll =window.pageYOffset;
@@ -88,9 +88,21 @@ setInterval(()=>{
 let audio = new Audio();
 let song_idx = 0;
 let songs=[
-{'src':'./static/songs/Are you gonna be my girl-Jet.mp3', 'name':'JET'},
-{'src':'./static/songs/Adventure of a lifetime-Coldplay.mp3', 'name':'Coldplay'},
-{'src':'./static/songs/Cocaina-Clandestina.mp3', 'name':'Clandestina'}];
+{'src':'./static/songs/Are you gonna be my girl-Jet.mp3', 'name':'JET', 'title': 'Are you gonna be my girl-Jet'},
+{'src':'./static/songs/Adventure of a lifetime-Coldplay.mp3', 'name':'Coldplay', 'title': 'Adventure of a lifetime-Coldplay'},
+{'src':'./static/songs/Cocaina-Clandestina.mp3', 'name':'Clandestina', 'title': 'Cocaina-Clandestina'}];
+
+
+for(let i = 0; i < songs.length; i++){
+	let playlistEntry = 
+	`<div class="row">
+		<p onclick="setSong(${i}); play();">${songs[i].title}</p>
+		<div class="pointer">
+			<div class="other" id="song_${i}"></div>
+		</div>
+	</div>`;
+	document.getElementById('player').innerHTML = document.getElementById('player').innerHTML + playlistEntry;
+}
 
 function setUpText(text){
 	document.getElementById('song-text').innerHTML = text;

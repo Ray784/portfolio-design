@@ -157,25 +157,7 @@
 	<div class="back">
 		<div class="list" id="songList">
 			<p id="song-text"> Now Playing</p>
-			<div class="playlist">
-				<div class="row">
-					<p onclick="setSong(0); play();">Are you gonna be my girl-Jet</p>
-					<div class="pointer">
-						<div class="other" id="song_0"></div>
-					</div>
-				</div>
-				<div class="row">
-					<p onclick="setSong(1); play();">Adventure of a lifetime-Coldplay</p>
-					<div class="pointer">
-						<div class="other" id="song_1"></div>
-					</div>
-				</div>
-				<div class="row">
-					<p onclick="setSong(2); play();">Cocaina-Clandestina</p> 
-					<div class="pointer">
-						<div class="other" id="song_2"></div>
-					</div>
-				</div>
+			<div class="playlist" id="player">
 			</div>
 		</div>
 		<div class="round">
@@ -185,7 +167,36 @@
 
 	<!-- Main section of the website, holds navigation container-->
 	<section id="main">
-		<section id="about" class="hide">
+		<section id="about" class="hide" style="padding: 0;">
+			<div class="wrapper">
+				<div class="background"></div>
+				<div class="container" style="margin: 0;">
+					<a href="https://www.jntuhceh.ac.in" target="_blank" class="card">
+						<img src="static/images/jntuh.jpg" class="about">
+						<div class="about-text">
+							<p>JNTUH-CEH, Hyderabad</p>
+							<p>B.Tech | Computer Science</p>
+						</div>
+						<p style="text-align: center;">Click anywhere to view college website</p>
+					</a>
+					<a href="./static/files/resume.pdf" target="_blank" class="card">
+						<img src="static/images/abhayBhat.jpg" class="about">
+						<div class="about-text">
+							<p id="age"></p>
+							<p>Software Engineer | Teradata</p>
+						</div>
+						<p style="text-align: center;">Click anywhere to view resume</p>
+					</a>
+					<a href="./static/files/gate-scorecard.pdf" target="_blank" class="card">
+						<img src="static/images/gate.jpeg" class="about">
+						<div class="about-text">
+							<p>GATE - 2020</p>
+							<p>Score - 752 | Rank - 422</p>
+						</div>
+						<p style="text-align: center;">Click anywhere to view scorecard</p>
+					</a>
+				</div>
+			</div>
 		</section>
 
 		<section class="hide" id="projects">
@@ -305,10 +316,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="projects-container">
-				<div class="project-card"></div>
-				<div class="project-card"></div>
-				<div class="project-card"></div>
+			<div class="container">
+				<div class="card"></div>
+				<div class="card"></div>
+				<div class="card"></div>
 			</div>
 		</section>
 		<section id="reach-out" class="hide" style="padding: 0;">

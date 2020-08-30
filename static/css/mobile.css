@@ -43,6 +43,9 @@
 	}
 }
 @media only screen and (min-width: 767px) {
+	.card{
+		flex: 1 0 calc(60% - 112px);
+	}
 	.project-card{
 		flex: 1 0 20vw;
 	}
@@ -95,5 +98,23 @@
 		content: '';
 		width: 0px;
 		height: 0px;
+	}
+}
+
+@media only screen and (min-width: 1023px) {
+	.card{
+		flex: 1 0 calc(100%/3 - 72px);
+		margin: 20px;
+	}
+	#about{
+		height: calc(100vh - 30px);
+		overflow-y: hidden;
+	}
+}
+
+@media only screen and (min-width: 1439px) {
+	.card{
+		flex: 1 0 calc(100%/3 - 112px);
+		margin: 40px;
 	}
 }
