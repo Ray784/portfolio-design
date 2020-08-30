@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+	<style type="text/css">
+		body{
+			background-color: #d3d3d3;
+		}
+		.skills-container{
+			width: 432px;
+			display: block;
+			margin: 0 auto;
+		}
+		.hex-row{
+			clear: left;
+		}
+		.hex-cell{
+			float: left;
+			margin-left: 3px;
+			margin-bottom: -26px;
+			transform: scale(0);
+			transition: 0.5s;
+			animation: play 0.5s ease-in forwards;
+		}
+		.hex-cell:nth-child(1){
+			animation-delay: 0.6s;
+		}
+		.hex-cell:nth-child(2){
+			animation-delay: 0.45s;
+		}
+		.hex-cell:nth-child(3){
+			animation-delay: 0.30s;
+		}
+		.hex-cell:nth-child(4){
+			animation-delay: 0.15s;
+		}
+		.hex-cell .cell-top{
+			width: 0;
+			border-bottom: 30px solid #fff;
+			border-left: 52px solid transparent;
+			border-right: 52px solid transparent;
+		}
+		.hex-cell .cell-bottom{
+			width: 0;
+			border-top: 30px solid #fff;
+			border-left: 52px solid transparent;
+			border-right: 52px solid transparent;
+		}
+		.hex-cell .cell{
+			width: 104px;
+			height: 60px;
+			text-align: center;
+			background-color: #fff;
+		}
+		.skill{
+			height: auto;
+			width: 70px;
+			position: relative;
+			top: -10px;
+			font-size: 60px;
+			display: block;
+			margin: auto;
+			object-fit: contain;		
+		}
+		@keyframes play{
+			0%{
+				transform: scale(0);
+			}
+			50%{
+				transform: scale(1.2);
+			}
+			100%{
+				transform: scale(1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="skills-container">
+		<div class="hex-row" style="margin-left: 159px;">
+			
+			<div class="hex-cell">
+				<div class="cell-top"></div>
+				<div class="cell">
+					<img src="/static/images/java.svg" class="skill" >
+				</div>
+				<div class="cell-bottom"></div>
+			</div>
+			<div class="hex-cell">
+				<div class="cell-top"></div>
+				<div class="cell">
+					<img src="/static/images/python.svg" class="skill" style="top: 0px;">
+				</div>
+				<div class="cell-bottom"></div>
+			</div>
+		</div>
+
+		<div class="hex-row">
+			<div class="hex-cell">
+				<div class="cell-top"></div>
+				<div class="cell">
+					<i class="devicon-html5-plain-wordmark colored skill" style="top: 0px;"></i>
+				</div>
+				<div class="cell-bottom"></div>
+			</div>
+			<div class="hex-cell">
+				<div class="cell-top"></div>
+				<div class="cell">
+					<i class="devicon-css3-plain-wordmark colored skill" style="top: 0px;"></i>
+				</div>
+				<div class="cell-bottom"></div>
+			</div>
+			<div class="hex-cell">
+				<div class="cell-top" style="border-bottom-color: #03599C;"></div>
+				<div class="cell" style="background-color: #03599C;">
+					<img src="/static/images/c.svg" class="skill" style="top: -5px;">
+				</div>
+				<div class="cell-bottom" style="border-top-color: #03599C;"></div>
+			</div>
+			<div class="hex-cell">
+				<div class="cell-top"></div>
+				<div class="cell">
+					<i class="devicon-bootstrap-plain-wordmark colored skill" style="top: 0px;"></i>
+				</div>
+				<div class="cell-bottom"></div>
+			</div>
+			
+		</div>
+
+		<div class="hex-row" style="margin-left: 53px;">
+			<div class="hex-cell">
+				<div class="cell-top"></div>
+				<div class="cell">
+					<img src="/static/images/amazonwebservices.svg" class="skill" style="width: 80px; top: -10px;">
+				</div>
+				<div class="cell-bottom"></div>
+			</div>
+			<div class="hex-cell">
+				<div class="cell-top" style="border-bottom-color: #6181B6;"></div>
+				<div class="cell" style="background-color: #6181B6;">
+					<img src="/static/images/php.svg" class="skill" style="width: 80px;">
+				</div>
+				<div class="cell-bottom" style="border-top-color: #6181B6;"></div>
+			</div>
+			
+			<div class="hex-cell">
+				<div class="cell-top"></div>
+				<div class="cell">
+					<i class="devicon-github-plain-wordmark colored skill" style="top: 0px;"></i>
+				</div>
+				<div class="cell-bottom"></div>
+			</div>
+			
+		</div>
+
+		<div class="hex-row" >
+			<div class="hex-cell">
+				<div class="cell-top"></div>
+				<div class="cell">
+					<img src="/static/images/mongo.svg" class="skill">
+				</div>
+				<div class="cell-bottom"></div>
+			</div>
+			<div class="hex-cell">
+				<div class="cell-top" style="border-bottom-color: #B3B3B3;"></div>
+				<div class="cell" style="background-color: #B3B3B3;">
+					<img src="/static/images/angular.svg" class="skill" style="top: 0px;">
+				</div>
+				<div class="cell-bottom" style="border-top-color: #B3B3B3;"></div>
+			</div>
+			<div class="hex-cell" >
+				<div class="cell-top" style="border-bottom-color: #F0DB4F;"></div>
+				<div class="cell" style="background-color: #F0DB4F;">
+					<img src="/static/images/js.svg" class="skill">
+				</div>
+				<div class="cell-bottom" style="border-top-color: #F0DB4F;"></div>
+			</div>
+		</div>
+
+		<div class="hex-row" style="margin-left: 53px;">
+			<div class="hex-cell">
+				<div class="cell-top"></div>
+				<div class="cell">
+					<img src="/static/images/sql.svg" class="skill">
+				</div>
+				<div class="cell-bottom"></div>
+			</div>
+			<div class="hex-cell">
+				<div class="cell-top"></div>
+				<div class="cell">
+					<img src="/static/images/node.svg" class="skill" style="width: 80px;">
+				</div>
+				<div class="cell-bottom"></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

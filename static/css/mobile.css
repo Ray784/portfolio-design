@@ -1,0 +1,106 @@
+@media only screen and (min-width: 425px) {
+	.skills-container{
+		margin-bottom: 200px;
+		max-width: 425px;
+	}
+	.hex-cell{
+		margin-left: 2px;
+		margin-bottom: -28px;
+	}
+	.hex-cell .cell-top{
+		border-bottom: 30px solid #fff;
+		border-left: 52px solid transparent;
+		border-right: 52px solid transparent;
+	}
+
+	.hex-cell .cell-bottom{
+		border-top: 30px solid #fff;
+		border-left: 52px solid transparent;
+		border-right: 52px solid transparent;
+	}
+	.hex-cell .cell{
+		width: 104px;
+		height: 60px;
+	}
+	.skill{
+		width: 70px;
+		top: -10px;
+		font-size: 60px;
+	}
+	.m1{
+		margin-left: 159px;
+	}
+
+	.m2{
+		margin-left: 53px;
+	}
+	.medium{
+		width: 70px; 
+		top: -10px;
+	}
+	.large{
+		width: 80px;
+	}
+}
+@media only screen and (min-width: 767px) {
+	.project-card{
+		flex: 1 0 20vw;
+	}
+	.div1{
+		margin-left: -70vw; 
+		padding-left: 30vw;
+	}
+	.div2{
+		padding-left: 30vw;
+	}
+	.text {
+		font-size: 2em;
+	}
+	.main {
+		font-size: 3.5em;
+	}
+	.main, .hello{
+		width: 40vw;
+	}
+	.title{ 
+		width: 140px;
+	}
+	.navBar{
+		justify-content: center;
+		align-items: center;
+	}
+	.mobile{
+		justify-content: center;
+		align-items: center;
+	}
+	.navBar a{
+		flex: 0 0 auto;
+	}
+	.tab-btn{
+		display: none;
+	}
+	.tab::after{
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		margin: 2px;
+		background-color: rgb(0,0,0, 0.5);
+		right: -12px;
+		top: 15px;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.lasttab::before{
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		margin: 2px;
+		background-color: rgb(0,0,0, 0.5);
+		left: -12px;
+		top: 15px;
+		border-radius: 50%;
+		z-index: 1;
+	}
+}
