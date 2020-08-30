@@ -347,7 +347,7 @@ body{
 .skills-container{
 	width: 100%;
 	max-width: 320px;
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 	display: block;
 	margin: 0 auto;
 }
@@ -396,6 +396,10 @@ body{
 	text-align: center;
 	background-color: #fff;
 	cursor: pointer;
+}
+
+.hex-cell:hover .skill{
+	transform: scale(1.2);
 }
 
 .skill{
