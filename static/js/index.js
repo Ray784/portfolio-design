@@ -5,6 +5,8 @@ let fonts = ['Playfair Display', 'Indie Flower', 'Kanit','Pacifico', 'Caveat', '
 let nav = document.getElementById('nav');
 let navTop = nav.offsetTop;
 
+
+
 window.onscroll = function(){
 	var currentScroll =window.pageYOffset;
 	let padding = document.getElementsByClassName('padding')[0];

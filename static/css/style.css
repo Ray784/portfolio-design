@@ -89,7 +89,7 @@ body{
 }
 
 .mobile{
-	background-color: #D2CCC4;
+	background-color: #d2ccc4;
 	display: flex;
 	color: #000;
 	width: 100%;
@@ -291,8 +291,10 @@ body{
 }
 
 #main section{
+	margin-top: -15px;
 	padding-top: 60px;
-	padding-bottom: 60px;  
+	padding-bottom: 100px;  
+	position: relative;
 	z-index: -1;
 }
 
@@ -301,10 +303,6 @@ body{
 }	
 
 #projects{
-	position: relative;
-	background-color: #2f4353;
-	background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
-	padding-bottom: 100px;
 }
 
 .skills-container{
@@ -428,7 +426,7 @@ body{
 }
 
 #reach-out{
-	height: calc(100vh - 40px);
+	height: calc(100vh - 30px);
 	pointer-events: none;	
 	overflow-y: hidden;
 }
@@ -447,19 +445,20 @@ body{
 	flex-wrap: wrap;
 }
 
-#reach-out .background{
-  background-repeat: no-repeat;
-	background-color: #2f4353;
-background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
-}
 
 .background {
-  background-size: contain;
-  position: absolute;
-  transition: 1s;
-  width: 100%;
-  z-index: -1;
-  height: 100%;
+	background-size: contain;
+	position: absolute;
+	transition: 1s;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+	height: 100%;
+	background: #d2ccc4;
+	background: -webkit-linear-gradient(135deg, #2f4353 0%, #d2ccc4 74%);
+	background: linear-gradient(135deg, #2f4353 0%, #d2ccc4 74%);
+	filter: blur(4px);
+  	background-repeat: no-repeat;
 }
 
 .contact-card-container{
