@@ -23,6 +23,11 @@ body{
  	font-family: Fira Code,sans-serif;
  	font-weight: 400;
  	overflow-x: hidden;
+ 	opacity: 0;
+}
+
+.fade{
+	opacity: 1;
 }
 
 input,

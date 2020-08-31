@@ -7,6 +7,9 @@ let navTop = nav.offsetTop;
 let age = (new Date(new Date() - new Date('06/30/1999')).getFullYear() - 1970) + ' years old';
 document.getElementById('age').innerText = age;
 
+window.onload = function(){
+	document.getElementsByTagName('body')[0].classList.add('fade');
+}
 window.onscroll = function(){
 	var currentScroll =window.pageYOffset;
 	let padding = document.getElementsByClassName('padding')[0];
