@@ -8,8 +8,10 @@ let age = (new Date(new Date() - new Date('06/30/1999')).getFullYear() - 1970) +
 document.getElementById('age').innerText = age;
 
 window.onload = function(){
-	document.getElementsByClassName('body')[0].classList.add('fade');
-	document.getElementsByClassName('init')[0].classList.add('hide');
+	setTimeout(()=>{
+		document.getElementsByClassName('body')[0].classList.add('fade');
+		document.getElementsByClassName('init')[0].classList.add('hide');
+	}, 500);
 }
 
 window.onscroll = function(){
