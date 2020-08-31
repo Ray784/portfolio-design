@@ -23,11 +23,22 @@ body{
  	font-family: Fira Code,sans-serif;
  	font-weight: 400;
  	overflow-x: hidden;
- 	opacity: 0;
+}
+
+.init{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .fade{
 	animation: fade 0.5s ease-in forwards;	
+}
+
+.body{
+ 	opacity: 0;
 }
 
 @keyframes fade{
