@@ -27,7 +27,7 @@ window.onscroll = function(){
 	
 	if(currentScroll > navTop){
 		nav.classList.add('fixed');
-		main.style.paddingTop = '40px';
+		main.style.paddingTop = '45px';
 	}
 	else{
 		nav.classList.remove('fixed');
@@ -88,9 +88,11 @@ setInterval(()=>{
 let audio = new Audio();
 let song_idx = 0;
 let songs=[
-{'src':'./static/songs/Are you gonna be my girl-Jet.mp3', 'name':'JET', 'title': 'Are you gonna be my girl-Jet'},
-{'src':'./static/songs/Adventure of a lifetime-Coldplay.mp3', 'name':'Coldplay', 'title': 'Adventure of a lifetime-Coldplay'},
-{'src':'./static/songs/Cocaina-Clandestina.mp3', 'name':'Clandestina', 'title': 'Cocaina-Clandestina'}];
+	{'src':'./static/songs/azaleh_rainy_nights.mp3', 'name':'Rainy Nights', 'title': 'Azaleh - Rainy Nights'},
+	{'src':'./static/songs/clandestina_cocaina.mp3', 'name':'Cocaina', 'title': 'Clandestina - Cocaina'},
+	{'src':'./static/songs/danny_cocke_collider.mp3', 'name':'Collider', 'title': 'Danny Cocke - Collider'},
+	{'src':'./static/songs/victoriya_disconnect.mp3', 'name':'Disconnect', 'title': 'Victoriya - Disconnect'},
+];
 
 
 for(let i = 0; i < songs.length; i++){
@@ -145,4 +147,139 @@ function scrollDiv(direction){
 	let nav_mob = document.getElementsByClassName('navBar')[0];
 	let scroll = nav_mob.children[0].offsetWidth;
 	nav_mob.scrollLeft += (scroll*direction);
+}
+
+
+let projects = [
+	{
+		'title': 'JNTUH Alumni Association', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
+		'github': '',
+		'deploy': 'http://jntuhcehaa.org/'
+	},{
+		'title': 'JNTUH CSE - Quest website', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
+		'github': 'https://github.com/Ray784/quest_website', 
+		'deploy': ''
+	},{
+		'title': 'Quiz Application', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['html', 'css', 'js', 'angular', 'nodejs', 'mongodb'], 
+		'github': '', 
+		'deploy': 'https://hirestar.io/'
+	},{
+		'title': 'Exploring Feature reduction techniques for Indic scripts', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['python'], 
+		'github': 'https://github.com/Ray784/mini_project', 
+		'deploy': ''
+	},{
+		'title': 'Don\'t Forget the Can Opener! - NASA', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
+		'github': 'https://github.com/Ray784/nasa_spaceapps', 
+		'deploy': ''
+	},{
+		'title': 'Event Management System', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
+		'github': 'https://github.com/Ray784/event_management', 
+		'deploy': ''
+	},{
+		'title': 'Project Mate', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['html', 'css', 'js', 'java', 'postgresql'], 
+		'github': 'https://github.com/Ray784/Project-Mate', 
+		'deploy': ''
+	},{
+		'title': 'Bits and Bytes', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['html', 'css', 'js', 'angular', 'nodejs', 'mongodb'], 
+		'github': 'https://github.com/Ray784/bitsandbytes', 
+		'deploy': 'https://bitsandbytes2020.herokuapp.com'
+	},{
+		'title': 'Gate2020 Score Calculator', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['html', 'css', 'bootstrap', 'python'], 
+		'github': 'https://github.com/Ray784/Gate2020-Score', 
+		'deploy': 'https://gate-2020.herokuapp.com/'
+	},{
+		'title': 'TS Intermediate first year results 2020 name-wise', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['html', 'css', 'bootstrap', 'python'], 
+		'github': 'https://github.com/Ray784/ts-inter-data', 
+		'deploy': 'https://tsbie20.herokuapp.com/'
+	},{
+		'title': 'Scraped English words', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['python'], 
+		'github': 'https://github.com/Ray784/english-words', 
+		'deploy': ''
+	},{
+		'title': 'Tic-Tac-Toe', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'ai'], 
+		'github': 'https://github.com/Ray784/tic_tac_toe/', 
+		'deploy': 'https://ray784.github.io/tic_tac_toe/'
+	},{
+		'title': 'Calculator', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['html', 'css', 'js', 'bootstrap'], 
+		'github': 'https://github.com/Ray784/calculator/', 
+		'deploy': 'https://ray784.github.io/calculator/'
+	},{
+		'title': 'Calculator - java', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['java'], 
+		'github': 'https://github.com/Ray784/java-calculator', 
+		'deploy': ''
+	},{
+		'title': 'Chatbot - Tensorflow', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['python'], 
+		'github': 'https://github.com/Ray784/chatbot', 
+		'deploy': ''
+	},{
+		'title': 'Cryptography Algorithms', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['java'], 
+		'github': 'https://github.com/Ray784/CryptAlgo', 
+		'deploy': ''
+	},{
+		'title': 'Classification/Clustering Algorithms', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['java'], 
+		'github': 'https://github.com/Ray784/DMDW', 
+		'deploy': ''
+	},{
+		'title': 'Paint', 
+		'desp':'', 
+		'icon':'',
+		'technologies': ['android'], 
+		'github': 'https://github.com/Ray784/paint', 
+		'deploy': 'https://github.com/Ray784/paint/releases'
+	}
+];
+
+function getProjectCard(){
+
 }

@@ -45,9 +45,6 @@
 	.card{
 		flex: 1 0 calc(60% - 112px);
 	}
-	.project-card{
-		flex: 1 0 20vw;
-	}
 	.div1{
 		margin-left: -70vw; 
 		padding-left: 30vw;
@@ -106,9 +103,10 @@
 		margin: 20px;
 	}
 	#about{
-		height: calc(100vh - 30px);
+		height: 100vh;
 		overflow-y: hidden;
 	}
+
 }
 
 @media only screen and (min-width: 1439px) {
