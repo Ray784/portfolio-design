@@ -9,9 +9,12 @@ document.getElementById('age').innerText = age;
 
 window.onload = function(){
 	setTimeout(()=>{
+		document.getElementById('load_circle').classList.add('zoomToFill');
+	}, 500);
+	setTimeout(()=>{
 		document.getElementsByClassName('body')[0].classList.add('fade');
 		document.getElementsByClassName('init')[0].classList.add('hide');
-	}, 500);
+	}, 1000);
 }
 
 window.onscroll = function(){
