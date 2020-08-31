@@ -12,7 +12,6 @@ window.onload = function(){
 	document.getElementsByClassName('init')[0].classList.add('hide');
 }
 
-
 window.onscroll = function(){
 	var currentScroll =window.pageYOffset;
 	let padding = document.getElementsByClassName('padding')[0];
