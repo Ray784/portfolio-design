@@ -33,17 +33,13 @@
 	.m2{
 		margin-left: 53px;
 	}
-	.medium{
-		width: 70px; 
-		top: -10px;
-	}
 	.large{
 		width: 80px;
 	}
 }
 @media only screen and (min-width: 767px) {
-	.card{
-		flex: 1 0 calc(60% - 112px);
+	.column {
+		flex-basis: calc(50% - 16px);
 	}
 	.div1{
 		margin-left: -70vw; 
@@ -98,20 +94,7 @@
 }
 
 @media only screen and (min-width: 1023px) {
-	.card{
-		flex: 1 0 calc(100%/3 - 72px);
-		margin: 20px;
-	}
-	#about{
-		height: 100vh;
-		overflow-y: hidden;
-	}
-
-}
-
-@media only screen and (min-width: 1439px) {
-	.card{
-		flex: 1 0 calc(100%/3 - 112px);
-		margin: 40px;
+	.column {
+		flex-basis: calc(25% - 16px);
 	}
 }

@@ -6,6 +6,7 @@ let nav = document.getElementById('nav');
 let navTop = nav.offsetTop;
 let age = (new Date(new Date() - new Date('06/30/1999')).getFullYear() - 1970) + ' years old';
 document.getElementById('age').innerText = age;
+collageImageAbout();
 
 window.onload = function(){
 	setTimeout(()=>{
@@ -149,6 +150,16 @@ audio.onended = function(){
 	play();
 }
 
+function collageImageAbout(){
+	let imageUrl = "/static/images/collage/";
+	let images = ["pondy-scene-1.jpg", "vishaka-scene-1.jpg", "araku-scene-1.jpg"];
+	let random1 = Math.floor(Math.random() * images.length);
+	let random2 = random1
+	while(random1 == random2)
+		random2 = Math.floor(Math.random() * images.length);
+	document.getElementById('about-collage-image1').src = imageUrl + images[random1];
+	document.getElementById('about-collage-image2').src = imageUrl + images[random2];
+}
 setTimeout(()=>{setUpText("Click to Play");}, 2000);
 setTimeout(()=>{document.getElementById('song-text').innerHTML = "Now Playing: "+songs[song_idx].name;}, 5000);
 setSong(song_idx);
