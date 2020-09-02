@@ -356,7 +356,6 @@ div {
 }
 
 #about{
-	height: 90vh;
 	background: #d2ccc4;
 	background: -webkit-linear-gradient(0deg, #2f4353 0%, #d2ccc4 74%);
 	background: linear-gradient(0deg, #2f4353 0%, #d2ccc4 74%);
@@ -369,7 +368,6 @@ div {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0 8px;
-	height: calc(100% - 16px);
 	cursor: pointer;
 	justify-content: center;
 	align-items: center;

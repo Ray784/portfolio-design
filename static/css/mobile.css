@@ -41,6 +41,12 @@
 	.column {
 		flex-basis: calc(50% - 16px);
 	}
+	#about{
+		height: 90vh;
+	}
+	#about .row{
+		height: calc(100% - 16px);
+	}
 	.div1{
 		margin-left: -70vw; 
 		padding-left: 30vw;
