@@ -10,9 +10,12 @@ collageImageAbout();
 
 window.onload = function(){
 	setTimeout(()=>{
+		document.getElementById('load_circle').classList.remove('hide');
+		document.getElementById('load_gif').classList.add('hide');
 		document.getElementById('load_circle').classList.add('zoomToFill');
 	}, 500);
 	setTimeout(()=>{
+		document.getElementsByTagName('body')[0].classList.remove('prebody');
 		document.getElementsByClassName('body')[0].classList.add('fade');
 		document.getElementsByClassName('init')[0].classList.add('hide');
 	}, 1000);
