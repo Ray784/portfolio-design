@@ -131,7 +131,11 @@
 				</div>
 			</div>
 		</section>
-
+		<div class="notification hide" id="notification">
+			<span>For better user experience please view on a desktop.</span>
+			<br>
+			<a class="a" onclick="showNav();">Continue with mobile website</a>
+		</div>
 		<!-- Nav bar -->
 		<div class="mobile" id="nav">
 			<a class="tab-btn" onclick="scrollDiv(-1)">
@@ -172,14 +176,14 @@
 					<div class="row"> 
 						<div class="column">
 							<div class="content long orange">
-								<img src="/static/images/collage/abhay-bhat-1.jpg" class="collage-img" style="object-position: top;">
+								<img src="/static/images/collage/abhay-bhat-1.jpg" class="collage-img fade" style="object-position: top;">
 							</div>
 							
 							<div class="content long grey">
 								<p class="card-text card-title">Abhay A Bhat</p>
 								<p class="card-text card-subtitle">Software Engineer | Teradata</p>
 								<p>A software developer with robust problem-solving skills and proven experience in creating softwares.</p>
-								<div class="btn">View Resume</div>
+								<a href="/static/files/resume.pdf" target="_blank" class="btn">View Resume</a>
 							</div>
 						</div>
 						<div class="column">
@@ -188,18 +192,18 @@
 								<p class="card-text card-subtitle">JNTUH | Hyderabad</p>
 							</div>
 							<div class="content long green">
-								<img id="about-collage-image1" src="" class="collage-img">
+								<img id="about-collage-image1" src="" class="collage-img fade">
 							</div>
 							<div class="content medium orange">
 								<p class="card-text card-title">GATE 2020</p>
 								<p class="card-text card-subtitle">IIT | Delhi</p>
 								<p>Score: 752/1000 | Rank: 422</p>
-								<div class="btn">View Scorecard</div>
+								<a href="/static/files/gate-scorecard.pdf" target="_blank" class="btn">View Scorecard</a>
 							</div>
 						</div>
 						<div class="column">
 							<div class="content long orange">
-								<img id="about-collage-image2" src="" class="collage-img">
+								<img id="about-collage-image2" src="" class="collage-img fade">
 							</div>
 							<div class="content short green">
 								<p class="card-text">Will be joining Teradata Hyderabad in September 2020.</p>
@@ -222,7 +226,7 @@
 								<p>Created a quiz application, worked with Skype Interviews API for hirestar.io</p>
 							</div>
 							<div class="content long grey">
-								<img src="/static/images/collage/abhay-bhat-2.jpg" class="collage-img" style="object-fit: contain;">
+								<img src="/static/images/collage/abhay-bhat-2.jpg" class="collage-img fade">
 							</div>
 						</div>
 					</div>
@@ -345,7 +349,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="wrapper">
+				<div style="margin-top: 100px;">
+					<div class="row" id="project-cards"> 
+					</div> 
 				</div>
 			</section>
 			<section id="reach-out" class="hide" style="padding: 0;">
@@ -379,12 +385,16 @@
 							</a>
 							<span>repeat<span style="color: #C51057;">()</span>;</span>
 						</div> 
+					</div>
 				</div>
 			</section>
 		</section>
 	</div>
 	<section class="init">
-		<img src="/static/images/preloader.gif" id="load_gif">
+		<div id="load_gif">
+			<img src="/static/images/preloader.gif" style="display: block; margin: auto;">
+			<div style="text-align: center;">Loading... This might take a while.</div>
+		</div>
 		<svg class="hello hide" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 150 150" style="background-color: none; transform: scale(0);"  id="load_circle">
 			<circle class="line" cx="75" cy="75" r="30" fill= "#93401F"> 
 				<animate dur="1s" attributeName="fill" 

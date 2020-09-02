@@ -48,6 +48,10 @@ body{
 	animation: fade 0.5s ease-in forwards;	
 }
 
+.fade-in{
+	animation: fade 1s ease-in;	
+}
+
 .body{
  	opacity: 0;
 }
@@ -71,6 +75,15 @@ body{
 	}
 	100%{
 		opacity: 1;
+	}
+}
+
+@keyframes fade-out{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
 	}
 }
 
@@ -153,6 +166,20 @@ div {
 	z-index: 800;
 	width: 100%;
 	border-top: 5px solid rgb(0, 0, 0, 1);
+}
+
+#notification a{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.notification{
+	background-color: #CCE5FF;
+	color: #5F8DBE;
+	display: block;
+	text-align: center;
+	border: 0px;
+	padding: 20px;
 }
 .navBar{
 	position: relative;
@@ -379,6 +406,7 @@ div {
 	border-radius: 8px;
 	width: 100%;
 	height: 100%;
+	opacity: 0;
 }
 
 .column {
@@ -395,24 +423,38 @@ div {
 	border-radius: 16px;
 	padding: 16px;
 	width: calc(100% - 32px);
-
 	display: flex;
+	text-align: justify;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	animation: zoom 0.5s ease-in forwards; 
+}
+
+#projects .content{
+	margin: 8px 8px;
+	flex: 1;
 }
 
 .short{
 	flex-basis: calc(20% - 24px);
 	max-height: calc(20% - 24px);
+	height: calc(20% - 24px);
+	transform: scale(0);
+	animation-delay: 0.45s;
 }
 .medium{
 	flex-basis: calc(30% - 24px);
 	max-height: calc(30% - 24px);
+	height: calc(30% - 24px);
+	transform: scale(0);
+	animation-delay: 0.3s;
 }
 .long{
 	flex-basis: calc(50% - 24px);
 	max-height: calc(50% - 24px);
+	height: calc(50% - 24px);
+	animation: zoom 0.5s ease-in; 
 }
 
 .orange{
@@ -439,10 +481,12 @@ div {
 
 .card-title{
 	font-size: 1.3em;
+	margin: 0;
 
 }
 .card-subtitle{
 	font-size: 0.8em;
+	margin: 0
 }
 
 .join{
@@ -460,22 +504,30 @@ div {
 	border-radius: 5px;
 	color: black;
 	transition: 0.5s;
+	text-decoration: none;
 }
 
 .btn:hover{
 	transform: scale(1.1);
 }
 
+
+#projects{
+	min-height: 90vh;
+}
+
 .skills-container{
 	width: 100%;
+	display: table;
 	max-width: 320px;
 	margin-bottom: 100px;
-	display: block;
 	margin: 0 auto;
 }
+
 .hex-row{
 	clear: left;
 }
+
 .hex-cell{
 	float: left;
 	margin-left: 2px;

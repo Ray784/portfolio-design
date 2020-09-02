@@ -44,7 +44,7 @@
 	#about{
 		height: 90vh;
 	}
-	#about .row{
+	#about .row, #projects .row{
 		height: calc(100% - 16px);
 	}
 	.div1{

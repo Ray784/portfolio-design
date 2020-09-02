@@ -6,13 +6,19 @@ let nav = document.getElementById('nav');
 let navTop = nav.offsetTop;
 let age = (new Date(new Date() - new Date('06/30/1999')).getFullYear() - 1970) + ' years old';
 document.getElementById('age').innerText = age;
+let navHidden = true;
 collageImageAbout();
+setInterval(()=>{collageImageAbout();}, 6000);
 
 window.onload = function(){
 	setTimeout(()=>{
 		document.getElementById('load_circle').classList.remove('hide');
 		document.getElementById('load_gif').classList.add('hide');
 		document.getElementById('load_circle').classList.add('zoomToFill');
+		if(window.screen.width < 720){
+			hideNav();
+		}
+
 	}, 500);
 	setTimeout(()=>{
 		document.getElementsByTagName('body')[0].classList.remove('prebody');
@@ -20,6 +26,19 @@ window.onload = function(){
 		document.getElementsByClassName('init')[0].classList.add('hide');
 	}, 1000);
 }
+
+
+function hideNav(){
+	document.getElementById('notification').classList.remove('hide');
+	document.getElementById('nav').classList.add('hide');
+	navHidden = false;
+}
+
+function showNav(){
+	document.getElementById('notification').classList.add('hide');
+	document.getElementById('nav').classList.remove('hide');
+}
+
 
 window.onscroll = function(){
 	var currentScroll =window.pageYOffset;
@@ -153,16 +172,31 @@ audio.onended = function(){
 	play();
 }
 
+function getTwoRandoms(max){
+	let random1 = Math.floor(Math.random() * max);
+	let random2 = random1;
+	while(random1 == random2)
+		random2 = Math.floor(Math.random() * max);
+	return [random1, random2];
+}
+
 function collageImageAbout(){
 	let imageUrl = "/static/images/collage/";
-	let images = ["pondy-scene-1.jpg", "vishaka-scene-1.jpg", "araku-scene-1.jpg"];
-	let random1 = Math.floor(Math.random() * images.length);
-	let random2 = random1
-	while(random1 == random2)
-		random2 = Math.floor(Math.random() * images.length);
-	document.getElementById('about-collage-image1').src = imageUrl + images[random1];
-	document.getElementById('about-collage-image2').src = imageUrl + images[random2];
+	let images = ["araku-1.jpg", "araku-2.jpg", "araku-3.jpg", "hyderabad-1.jpg", "hyderabad-2.jpg", "kasaragod-1.jpg", "pondy-1.jpg", "pondy-2.jpg", "pondy-3.jpg", "pondy-4.jpg", "vishaka-1.jpg", "vishaka-2.jpg"];
+	let randomNum = getTwoRandoms(images.length);
+	img1 = document.getElementById('about-collage-image1');
+	img2 = document.getElementById('about-collage-image2');
+	img1.classList.remove('fade')
+	img2.classList.remove('fade')
+	setTimeout(()=>{
+		img1.src = imageUrl + images[randomNum[0]];
+		img2.src = imageUrl + images[randomNum[1]];
+		img1.classList.add('fade')
+		img2.classList.add('fade')
+	}, 100);
+	
 }
+
 setTimeout(()=>{setUpText("Click to Play");}, 2000);
 setTimeout(()=>{document.getElementById('song-text').innerHTML = "Now Playing: "+songs[song_idx].name;}, 5000);
 setSong(song_idx);
@@ -304,6 +338,17 @@ let projects = [
 	}
 ];
 
-function getProjectCard(){
+function addProjects(){
+	let project_card_container = document.getElementById('project-cards');
+	for(let project of projects)
+		project_card_container.innerHTML = project_card_container.innerHTML + getProjectCard(project);
+}
 
+addProjects();
+
+function getProjectCard(project){
+	let head = `<div class="content medium grey"><p class="card-text card-title">${project.title}</p>`;
+	let sub_head = `<p class="card-text card-subtitle">blah | blah</p>`;
+	let technologies = `<p>${project.technologies}</p></div>`;
+	return head + sub_head + technologies;
 }
