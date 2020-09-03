@@ -5,28 +5,19 @@ let fonts = ['Fira Code', 'Playfair Display', 'Indie Flower', 'Kanit','Pacifico'
 let nav = document.getElementById('nav');
 let navTop = nav.offsetTop;
 let age = (new Date(new Date() - new Date('06/30/1999')).getFullYear() - 1970) + ' years old';
-document.getElementById('age').innerText = age;
 let navHidden = true;
-collageImageAbout();
-setInterval(()=>{collageImageAbout();}, 6000);
-
-window.onload = function(){
-	setTimeout(()=>{
-		document.getElementById('load_circle').classList.remove('hide');
-		document.getElementById('load_gif').classList.add('hide');
-		document.getElementById('load_circle').classList.add('zoomToFill');
-		if(window.screen.width < 720){
-			hideNav();
-		}
-
-	}, 500);
-	setTimeout(()=>{
-		document.getElementsByTagName('body')[0].classList.remove('prebody');
-		document.getElementsByClassName('body')[0].classList.add('fade');
-		document.getElementsByClassName('init')[0].classList.add('hide');
-	}, 1000);
-}
-
+let audio = new Audio();
+let song_idx = 0;
+let songs=[
+	{'src':'./static/songs/azaleh_rainy_nights.mp3', 'name':'Rainy Nights', 'title': 'Azaleh - Rainy Nights'},
+	{'src':'./static/songs/clandestina_cocaina.mp3', 'name':'Cocaina', 'title': 'Clandestina - Cocaina'},
+	{'src':'./static/songs/danny_cocke_collider.mp3', 'name':'Collider', 'title': 'Danny Cocke - Collider'},
+];
+let imageUrl = "/static/images/collage/";
+let images = ["araku-1.jpg", "araku-2.jpg", "araku-3.jpg", "hyderabad-1.jpg", "hyderabad-2.jpg", "kasaragod-1.jpg", "pondy-1.jpg", "pondy-2.jpg", "pondy-3.jpg", "pondy-4.jpg", "vishaka-1.jpg", "vishaka-2.jpg"];
+let image = new Image();
+let n = 0;
+let max_imgs = 3;
 
 function hideNav(){
 	document.getElementById('notification').classList.remove('hide');
@@ -38,7 +29,6 @@ function showNav(){
 	document.getElementById('notification').classList.add('hide');
 	document.getElementById('nav').classList.remove('hide');
 }
-
 
 window.onscroll = function(){
 	var currentScroll =window.pageYOffset;
@@ -111,34 +101,6 @@ function active(nav, id){
 	document.getElementById(id).classList.add('show');
 }
 
-shuffle(idx);
-setInterval(()=>{
-	idx+=1; 
-	idx%=portfolios1.length; 
-	shuffle(idx);
-}, 5000);
-
-let audio = new Audio();
-let song_idx = 0;
-let songs=[
-	{'src':'./static/songs/azaleh_rainy_nights.mp3', 'name':'Rainy Nights', 'title': 'Azaleh - Rainy Nights'},
-	{'src':'./static/songs/clandestina_cocaina.mp3', 'name':'Cocaina', 'title': 'Clandestina - Cocaina'},
-	{'src':'./static/songs/danny_cocke_collider.mp3', 'name':'Collider', 'title': 'Danny Cocke - Collider'},
-	{'src':'./static/songs/victoriya_disconnect.mp3', 'name':'Disconnect', 'title': 'Victoriya - Disconnect'},
-];
-
-
-for(let i = 0; i < songs.length; i++){
-	let playlistEntry = 
-	`<div class="row">
-		<p onclick="setSong(${i}); play();">${songs[i].title}</p>
-		<div class="pointer">
-			<div class="other" id="song_${i}"></div>
-		</div>
-	</div>`;
-	document.getElementById('player').innerHTML = document.getElementById('player').innerHTML + playlistEntry;
-}
-
 function setUpText(text){
 	document.getElementById('song-text').innerHTML = text;
 	document.getElementById('songList').style.maxWidth="500px";	
@@ -172,18 +134,17 @@ audio.onended = function(){
 	play();
 }
 
-function getTwoRandoms(max){
-	let random1 = Math.floor(Math.random() * max);
+function getTwoRandoms(){
+	let random1 = Math.floor(Math.random() * n);
 	let random2 = random1;
 	while(random1 == random2)
-		random2 = Math.floor(Math.random() * max);
+		random2 = Math.floor(Math.random() * n);
 	return [random1, random2];
 }
 
 function collageImageAbout(){
-	let imageUrl = "/static/images/collage/";
-	let images = ["araku-1.jpg", "araku-2.jpg", "araku-3.jpg", "hyderabad-1.jpg", "hyderabad-2.jpg", "kasaragod-1.jpg", "pondy-1.jpg", "pondy-2.jpg", "pondy-3.jpg", "pondy-4.jpg", "vishaka-1.jpg", "vishaka-2.jpg"];
-	let randomNum = getTwoRandoms(images.length);
+	let randomNum = getTwoRandoms();
+	console.log(images[randomNum[0]], images[randomNum[1]]);
 	img1 = document.getElementById('about-collage-image1');
 	img2 = document.getElementById('about-collage-image2');
 	img1.classList.remove('fade')
@@ -196,10 +157,6 @@ function collageImageAbout(){
 	}, 100);
 	
 }
-
-setTimeout(()=>{setUpText("Click to Play");}, 2000);
-setTimeout(()=>{document.getElementById('song-text').innerHTML = "Now Playing: "+songs[song_idx].name;}, 5000);
-setSong(song_idx);
 
 function scrollDiv(direction){
 	let nav_mob = document.getElementsByClassName('navBar')[0];
@@ -344,11 +301,69 @@ function addProjects(){
 		project_card_container.innerHTML = project_card_container.innerHTML + getProjectCard(project);
 }
 
-addProjects();
-
 function getProjectCard(project){
 	let head = `<div class="content medium grey"><p class="card-text card-title">${project.title}</p>`;
 	let sub_head = `<p class="card-text card-subtitle">blah | blah</p>`;
 	let technologies = `<p>${project.technologies}</p></div>`;
 	return head + sub_head + technologies;
 }
+
+window.onload = function(){
+	setTimeout(()=>{
+		document.getElementById('load_circle').classList.remove('hide');
+		document.getElementById('load_gif').classList.add('hide');
+		document.getElementById('load_circle').classList.add('zoomToFill');
+		if(window.screen.width < 720){
+			hideNav();
+		}
+	}, 500);
+	setTimeout(()=>{
+		document.getElementsByTagName('body')[0].classList.remove('prebody');
+		document.getElementsByClassName('body')[0].classList.add('fade');
+		document.getElementsByClassName('init')[0].classList.add('hide');
+		document.getElementById('age').innerText = age;
+		collageImageAbout();
+		setInterval(()=>{collageImageAbout();}, 6000);
+		shuffle(idx);
+		setInterval(()=>{
+			idx+=1; 
+			idx%=portfolios1.length; 
+			shuffle(idx);
+		}, 5000);
+		addProjects();
+
+		setTimeout(()=>{setUpText("Click to Play");}, 2000);
+		setTimeout(()=>{document.getElementById('song-text').innerHTML = "Now Playing: "+songs[song_idx].name;}, 5000);
+		for(let i = 0; i < songs.length; i++){
+			let playlistEntry = 
+			`<div class="row">
+				<p onclick="setSong(${i}); play();">${songs[i].title}</p>
+				<div class="pointer">
+					<div class="other" id="song_${i}"></div>
+				</div>
+			</div>`;
+			document.getElementById('player').innerHTML = document.getElementById('player').innerHTML + playlistEntry;
+		}
+		max_imgs = images.length;
+		preloadCollageImages(3);
+		setSong(song_idx);
+	}, 1000);
+}
+
+//preloading images - images optimised using http://jpeg-optimizer.com/ - settings: compression-level: 70, image-size: 1024px.
+function preloadCollageImages(i){
+	if(i < max_imgs){
+		image.src = imageUrl + images[i]
+		image.onload = () => {
+			n = i+1;
+			return preloadCollageImages(i + 1);
+		}
+	}else
+		return;
+}
+
+preloadCollageImages(0);
+
+
+
+
