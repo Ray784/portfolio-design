@@ -144,17 +144,17 @@ function getTwoRandoms(){
 
 function collageImageAbout(){
 	let randomNum = getTwoRandoms();
-	console.log(images[randomNum[0]], images[randomNum[1]]);
 	img1 = document.getElementById('about-collage-image1');
 	img2 = document.getElementById('about-collage-image2');
-	img1.classList.remove('fade')
-	img2.classList.remove('fade')
+	img1.classList.add('fade-out')
+	img2.classList.add('fade-out')
+
 	setTimeout(()=>{
 		img1.src = imageUrl + images[randomNum[0]];
 		img2.src = imageUrl + images[randomNum[1]];
-		img1.classList.add('fade')
-		img2.classList.add('fade')
-	}, 100);
+		img1.classList.remove('fade-out')
+		img2.classList.remove('fade-out')
+	}, 500);
 	
 }
 
@@ -168,41 +168,47 @@ function scrollDiv(direction){
 let projects = [
 	{
 		'title': 'JNTUH Alumni Association', 
-		'desp':'', 
+		'subtitle': 'Backend | JNTUH',
+		'desp':'An alumni association website is “members-only” online community where alumni i.e former students can set up a profile to access exclusive resources. Worked as a backend developer for an Alumni Association website for JNTUH.', 
 		'icon':'',
 		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
 		'github': '',
 		'deploy': 'http://jntuhcehaa.org/'
 	},{
-		'title': 'JNTUH CSE - Quest website', 
-		'desp':'', 
+		'title': 'JNTUH CSE - Quest website',
+		'subtitle': 'Full Stack | JNTUH', 
+		'desp':'Quest is a National Level Technical Symposium conducted by the Department of C.S.E, JNTUH-CEH. Worked as a developer for a website to allow students from across colleges to register themselves for the events.', 
 		'icon':'',
 		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
 		'github': 'https://github.com/Ray784/quest_website', 
 		'deploy': ''
 	},{
 		'title': 'Quiz Application', 
-		'desp':'', 
+		'subtitle':'Full Stack | Dapplogix',
+		'desp':'HireStar(a product of Dapplogix) is a recruitment & verification portal on Hyperledger blockchain. Worked on creating a quiz application to evaluate candidate\'s technical skills.', 
 		'icon':'',
 		'technologies': ['html', 'css', 'js', 'angular', 'nodejs', 'mongodb'], 
 		'github': '', 
 		'deploy': 'https://hirestar.io/'
 	},{
 		'title': 'Exploring Feature reduction techniques for Indic scripts', 
-		'desp':'', 
+		'subtitle': 'Research | JNTUH | Curriculum',
+		'desp':'The study is on investigating the effect of Dimensionality reduction on text document clustering of Indic Scripts (specifically Telugu).  English text documents are chosen as case study for a baseline.', 
 		'icon':'',
 		'technologies': ['python'], 
 		'github': 'https://github.com/Ray784/mini_project', 
 		'deploy': ''
 	},{
 		'title': 'Don\'t Forget the Can Opener! - NASA', 
-		'desp':'', 
+		'subtitle':'Full Stack | Hackathon',
+		'desp':'created an easy-to-use way for people to develop their own, custom checklists – both items and plans – for earthquakes. Used NASA USGS data to illustrate it, to help people understand how to prepare, provide safety measures as well as locations to safequard themselves.', 
 		'icon':'',
 		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
 		'github': 'https://github.com/Ray784/nasa_spaceapps', 
 		'deploy': ''
 	},{
 		'title': 'Event Management System', 
+		'subtitle': 'Full Stack | Curriculum',
 		'desp':'', 
 		'icon':'',
 		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
@@ -210,6 +216,7 @@ let projects = [
 		'deploy': ''
 	},{
 		'title': 'Project Mate', 
+		'subtitle':'Full Stack | Curriculum', 
 		'desp':'', 
 		'icon':'',
 		'technologies': ['html', 'css', 'js', 'java', 'postgresql'], 
@@ -217,27 +224,31 @@ let projects = [
 		'deploy': ''
 	},{
 		'title': 'Bits and Bytes', 
+		'subtitle':'Full Stack | JNTUH', 
 		'desp':'', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'angular', 'nodejs', 'mongodb'], 
+		'technologies': ['html', 'css', 'js', 'angular', 'nodejs', 'mongodb', 'd3js', 'heroku'], 
 		'github': 'https://github.com/Ray784/bitsandbytes', 
 		'deploy': 'https://bitsandbytes2020.herokuapp.com'
 	},{
 		'title': 'Gate2020 Score Calculator', 
+		'subtitle':'Flask | Scraping', 
 		'desp':'', 
 		'icon':'',
-		'technologies': ['html', 'css', 'bootstrap', 'python'], 
+		'technologies': ['html', 'css', 'bootstrap', 'python', 'heroku'], 
 		'github': 'https://github.com/Ray784/Gate2020-Score', 
 		'deploy': 'https://gate-2020.herokuapp.com/'
 	},{
 		'title': 'TS Intermediate first year results 2020 name-wise', 
+		'subtitle':'Flask | Scraping', 
 		'desp':'', 
 		'icon':'',
-		'technologies': ['html', 'css', 'bootstrap', 'python'], 
+		'technologies': ['html', 'css', 'bootstrap', 'python', 'heroku'], 
 		'github': 'https://github.com/Ray784/ts-inter-data', 
 		'deploy': 'https://tsbie20.herokuapp.com/'
 	},{
 		'title': 'Scraped English words', 
+		'subtitle':'Scraping', 
 		'desp':'', 
 		'icon':'',
 		'technologies': ['python'], 
@@ -245,20 +256,23 @@ let projects = [
 		'deploy': ''
 	},{
 		'title': 'Tic-Tac-Toe', 
+		'subtitle':'Android | AI | Game', 
 		'desp':'', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'bootstrap', 'ai'], 
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'android'], 
 		'github': 'https://github.com/Ray784/tic_tac_toe/', 
 		'deploy': 'https://ray784.github.io/tic_tac_toe/'
 	},{
 		'title': 'Calculator', 
+		'subtitle':'Android | JS', 
 		'desp':'', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'bootstrap'], 
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'android'], 
 		'github': 'https://github.com/Ray784/calculator/', 
 		'deploy': 'https://ray784.github.io/calculator/'
 	},{
 		'title': 'Calculator - java', 
+		'subtitle':'Side Project', 
 		'desp':'', 
 		'icon':'',
 		'technologies': ['java'], 
@@ -266,6 +280,7 @@ let projects = [
 		'deploy': ''
 	},{
 		'title': 'Chatbot - Tensorflow', 
+		'subtitle':'NLP | Tensorflow', 
 		'desp':'', 
 		'icon':'',
 		'technologies': ['python'], 
@@ -273,6 +288,7 @@ let projects = [
 		'deploy': ''
 	},{
 		'title': 'Cryptography Algorithms', 
+		'subtitle':'Cryptography | Curriculum', 
 		'desp':'', 
 		'icon':'',
 		'technologies': ['java'], 
@@ -280,6 +296,7 @@ let projects = [
 		'deploy': ''
 	},{
 		'title': 'Classification/Clustering Algorithms', 
+		'subtitle':'ML | Curriculum', 
 		'desp':'', 
 		'icon':'',
 		'technologies': ['java'], 
@@ -287,6 +304,7 @@ let projects = [
 		'deploy': ''
 	},{
 		'title': 'Paint', 
+		'subtitle':'Android | Thunkable', 
 		'desp':'', 
 		'icon':'',
 		'technologies': ['android'], 
@@ -296,16 +314,37 @@ let projects = [
 ];
 
 function addProjects(){
+	let projects_length = Math.floor(projects.length / 4);
 	let project_card_container = document.getElementById('project-cards');
-	for(let project of projects)
-		project_card_container.innerHTML = project_card_container.innerHTML + getProjectCard(project);
+	let column; 
+	for(let i in projects){
+		console.log(i % projects_length == 0 && i > 0);
+		if(i % projects_length == 0){
+			if(column)
+				project_card_container.appendChild(column);
+			column = document.createElement('div');
+			column.classList.add('column')
+		}
+		column.innerHTML += getProjectCard(projects[i]);
+	}
+	project_card_container.appendChild(column);
 }
 
 function getProjectCard(project){
-	let head = `<div class="content medium grey"><p class="card-text card-title">${project.title}</p>`;
-	let sub_head = `<p class="card-text card-subtitle">blah | blah</p>`;
-	let technologies = `<p>${project.technologies}</p></div>`;
-	return head + sub_head + technologies;
+	let head = `<div class="content medium"><p class="card-text card-title">${project.title}</p>`;
+	let sub_head = `<p class="card-text card-subtitle">${project.subtitle}</p>`;
+	let description = `<p class="card-text">${project.desp}</p>`;
+	let technologies = `<p class="project-skill-container">${getTechnologies(project.technologies)}</p>`;
+	let foot = `</div>`;
+	return head + sub_head + technologies + description + foot;
+}
+
+function getTechnologies(technologies){
+	let technology = ``;
+	for(tech of technologies){
+		technology += `<img src="/static/images/projects/${tech}.svg" class="project-skill">`;
+	}
+	return technology;
 }
 
 window.onload = function(){
