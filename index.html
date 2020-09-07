@@ -206,7 +206,9 @@
 								<img id="about-collage-image2" src="" class="collage-img fade">
 							</div>
 							<div class="content short">
-								<p class="card-text">Will be joining Teradata Hyderabad in September 2020.</p>
+								<p class="card-text card-title">Software Engineer</p>
+								<p class="card-text card-subtitle">Teradata | Hyderabad</p>
+								<p class="card-text join">September 2020 -</p>
 							</div>
 							<div class="content medium">
 								<p class="card-text card-title">Reasearch Intern</p>
@@ -217,7 +219,7 @@
 						</div>
 						<div class="column">
 							<div class="content short">
-								<p class="card-text" id="age"></p>
+								<p class="card-text" id="age" style="text-align: center;"></p>
 							</div>
 							<div class="content medium">
 								<p class="card-text card-title">MEAN Developer</p>
@@ -236,14 +238,14 @@
 				<div class="background"></div>
 				<div class="skills-container">
 					<div class="hex-row m1">
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('java'); scrollToView('project-cards');">
 							<div class="cell-top"></div>
 							<div class="cell">
-								<img src="/static/images/java.svg" class="skill" >
+								<img src="/static/images/java.svg" class="skill">
 							</div>
 							<div class="cell-bottom"></div>
 						</div>
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('python'); scrollToView('project-cards');">
 							<div class="cell-top"></div>
 							<div class="cell">
 								<img src="/static/images/python.svg" class="skill" style="top: 0px;">
@@ -253,14 +255,14 @@
 					</div>
 
 					<div class="hex-row">
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('html'); scrollToView('project-cards');">
 							<div class="cell-top"></div>
 							<div class="cell">
 								<i class="devicon-html5-plain-wordmark colored skill" style="top: 0px;"></i>
 							</div>
 							<div class="cell-bottom"></div>
 						</div>
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('css'); scrollToView('project-cards');">
 							<div class="cell-top"></div>
 							<div class="cell">
 								<i class="devicon-css3-plain-wordmark colored skill" style="top: 0px;"></i>
@@ -274,7 +276,7 @@
 							</div>
 							<div class="cell-bottom" style="border-top-color: #03599C;"></div>
 						</div>
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('bootstrap'); scrollToView('project-cards');">
 							<div class="cell-top"></div>
 							<div class="cell">
 								<i class="devicon-bootstrap-plain-wordmark colored skill" style="top: 0px;"></i>
@@ -284,14 +286,14 @@
 					</div>
 
 					<div class="hex-row m2">
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('github'); scrollToView('project-cards');">
 							<div class="cell-top"></div>
 							<div class="cell">
 								<img src="/static/images/amazonwebservices.svg" class="skill large">
 							</div>
 							<div class="cell-bottom"></div>
 						</div>
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('php'); scrollToView('project-cards');">
 							<div class="cell-top" style="border-bottom-color: #6181B6;"></div>
 							<div class="cell" style="background-color: #6181B6;">
 								<img src="/static/images/php.svg" class="skill large">
@@ -299,7 +301,7 @@
 							<div class="cell-bottom" style="border-top-color: #6181B6;"></div>
 						</div>
 						
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('github'); scrollToView('project-cards');">
 							<div class="cell-top"></div>
 							<div class="cell">
 								<i class="devicon-github-plain-wordmark colored skill" style="top: 0px;"></i>
@@ -309,21 +311,21 @@
 					</div>
 
 					<div class="hex-row" >
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('mongodb'); scrollToView('project-cards');">
 							<div class="cell-top"></div>
 							<div class="cell">
 								<img src="/static/images/mongo.svg" class="skill">
 							</div>
 							<div class="cell-bottom"></div>
 						</div>
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('angular'); scrollToView('project-cards');">
 							<div class="cell-top" style="border-bottom-color: #B3B3B3;"></div>
 							<div class="cell" style="background-color: #B3B3B3;">
 								<img src="/static/images/angular.svg" class="skill" style="top: 0px;">
 							</div>
 							<div class="cell-bottom" style="border-top-color: #B3B3B3;"></div>
 						</div>
-						<div class="hex-cell" >
+						<div class="hex-cell" onclick="getProjects('js'); scrollToView('project-cards');">
 							<div class="cell-top" style="border-bottom-color: #F0DB4F;"></div>
 							<div class="cell" style="background-color: #F0DB4F;">
 								<img src="/static/images/js.svg" class="skill">
@@ -333,14 +335,14 @@
 					</div>
 
 					<div class="hex-row m2">
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('mysql'); scrollToView('project-cards');">
 							<div class="cell-top"></div>
 							<div class="cell">
 								<img src="/static/images/sql.svg" class="skill">
 							</div>
 							<div class="cell-bottom"></div>
 						</div>
-						<div class="hex-cell">
+						<div class="hex-cell" onclick="getProjects('nodejs'); scrollToView('project-cards');">
 							<div class="cell-top"></div>
 							<div class="cell">
 								<a><img src="/static/images/node.svg" class="skill large"></a>
@@ -349,10 +351,7 @@
 						</div>
 					</div>
 				</div>
-				<div style="margin-top: 100px; width: 100vw;">
-					<div class="row" id="project-cards"> 
-
-					</div> 
+				<div style="margin: auto; margin-top: 100px; width: 90vw;" id="project-cards">
 				</div>
 			</section>
 			<section id="reach-out" class="hide" style="padding: 0;">
@@ -387,7 +386,7 @@
 							<span>repeat<span style="color: #C51057;">()</span>;</span>
 						</div> 
 					</div>
-					<div class="row" style="color: #fcfcfc">
+					<div class="row" style="color: #fcfcfc; text-align: center;">
 						<p>Developer: Abhay Bhat | Design Ideas: Venkat Kamath | Photos: Mi A1, Iphone X</p>
 					</div>
 					<div class="row">

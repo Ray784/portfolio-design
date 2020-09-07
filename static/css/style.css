@@ -367,9 +367,6 @@ div {
 	border-width: 0px 0px 0px 20px;
 	margin: 20px;
 	border-style: double;
-	/*top: 20px;
-	left: 5px;*/
-
 }
 
 .current{
@@ -393,6 +390,7 @@ div {
 
 .row {
 	display: flex;
+	flex: 1;
 	flex-wrap: wrap;
 	padding: 0 8px;
 	cursor: pointer;
@@ -409,16 +407,25 @@ div {
 	opacity: 0;
 }
 
+p{
+	word-wrap: break-word;
+}
+
 .column {
 	flex: 1;
 	flex-basis: calc(100% - 16px);
+	max-width: calc(100% - 16px);
 	padding: 0 8px;
 	display: flex;
 	flex-direction: column;
+}
+
+#about .column{
 	height: 100%;
 }
 
 .content {
+	flex: 1;
 	margin-top: 16px;
 	border-radius: 16px;
 	padding: 16px;
@@ -441,12 +448,6 @@ div {
 
 }
 
-/*#projects .content{
-	margin: 8px 8px;
-	padding: 30px;
-	flex: 1;
-}*/
-
 .short{
 	flex-basis: calc(20% - 24px);
 	max-height: calc(20% - 24px);
@@ -461,6 +462,7 @@ div {
 	transform: scale(0);
 	animation-delay: 0.3s;
 }
+
 .long{
 	flex-basis: calc(50% - 24px);
 	max-height: calc(50% - 24px);
@@ -504,6 +506,7 @@ div {
 
 .join{
 	font-size: 0.9em;
+	text-align: center;
 }
 
 .col{
@@ -626,6 +629,58 @@ div {
 	margin: 10px;
 }
 
+
+.project-row {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	padding: 8px;
+}
+
+.project-content {
+	margin: 16px;
+	border-radius: 16px;
+	flex: 1;
+	flex-basis: calc(30% - 24px);
+	padding: 16px;
+	text-align: justify;
+	transition: 0.5s;
+	animation: zoom 0.5s ease-in forwards; 
+	background-color: rgb(252, 252, 252);
+	box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.5);
+	transform: scale(0);
+	animation-delay: 0.3s;
+	position: relative;
+	cursor: pointer;
+}
+
+.project-content .overlay{
+	position: absolute;
+	background-color: rgb(0,0,0,0);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: 16px;
+	transition: 0.5s;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.project-content:hover .overlay{
+	display: flex;
+	background-color: rgb(0,0,0,0.8);
+}
+
+.project-content .source{
+	color: #3a3a3a;
+	background-color: #fcfcfc;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+
 @keyframes play{
 	0%{
 		transform: scale(0);
@@ -723,7 +778,7 @@ div {
     transition: 0.5s;
 }
 
-.source svg{
+.github,.source svg{
 	width: 20px;
     vertical-align: text-bottom;
     margin-bottom: -2px;

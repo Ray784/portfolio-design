@@ -171,7 +171,7 @@ let projects = [
 		'subtitle': 'Backend | JNTUH',
 		'desp':'An alumni association website is “members-only” online community where alumni i.e former students can set up a profile to access exclusive resources. Worked as a backend developer for an Alumni Association website for JNTUH.', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql', 'github'], 
 		'github': '',
 		'deploy': 'http://jntuhcehaa.org/'
 	},{
@@ -179,7 +179,7 @@ let projects = [
 		'subtitle': 'Full Stack | JNTUH', 
 		'desp':'Quest is a National Level Technical Symposium conducted by the Department of C.S.E, JNTUH-CEH. Worked as a developer for a website to allow students from across colleges to register themselves for the events.', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql', 'github'], 
 		'github': 'https://github.com/Ray784/quest_website', 
 		'deploy': ''
 	},{
@@ -187,156 +187,167 @@ let projects = [
 		'subtitle':'Full Stack | Dapplogix',
 		'desp':'HireStar(a product of Dapplogix) is a recruitment & verification portal on Hyperledger blockchain. Worked on creating a quiz application to evaluate candidate\'s technical skills.', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'angular', 'nodejs', 'mongodb'], 
+		'technologies': ['html', 'css', 'js', 'angular', 'nodejs', 'mongodb', 'github'], 
 		'github': '', 
 		'deploy': 'https://hirestar.io/'
 	},{
 		'title': 'Exploring Feature reduction techniques for Indic scripts', 
 		'subtitle': 'Research | JNTUH | Curriculum',
-		'desp':'The study is on investigating the effect of Dimensionality reduction on text document clustering of Indic Scripts (specifically Telugu).  English text documents are chosen as case study for a baseline.', 
+		'desp':'Indic languages create a great challenge in text mining due to high dimensionality thus we explored the effects of feature reduction techniques on such languages.', 
 		'icon':'',
-		'technologies': ['python'], 
+		'technologies': ['python', 'github'], 
 		'github': 'https://github.com/Ray784/mini_project', 
 		'deploy': ''
 	},{
 		'title': 'Don\'t Forget the Can Opener! - NASA', 
 		'subtitle':'Full Stack | Hackathon',
-		'desp':'created an easy-to-use way for people to develop their own, custom checklists – both items and plans – for earthquakes. Used NASA USGS data to illustrate it, to help people understand how to prepare, provide safety measures as well as locations to safequard themselves.', 
+		'desp':'Created an easy-to-use way for people to develop their own, custom checklists – both items and plans – for earthquakes. Used NASA USGS data to illustrate it, to help people understand how to prepare, provide safety measures as well as locations to safequard themselves.', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql', 'github'], 
 		'github': 'https://github.com/Ray784/nasa_spaceapps', 
 		'deploy': ''
 	},{
 		'title': 'Event Management System', 
 		'subtitle': 'Full Stack | Curriculum',
-		'desp':'', 
+		'desp':'Event management is the application of project management to the creation and development of small and/or large-scale personal or corporate events such as festivals, conferences, ceremonies, weddings, formal parties, concerts, or conventions. It involves coordinating the technical aspects before actually launching the event. Created this website under Database System curicullum.', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql'], 
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'php', 'mysql', 'github'], 
 		'github': 'https://github.com/Ray784/event_management', 
 		'deploy': ''
 	},{
 		'title': 'Project Mate', 
 		'subtitle':'Full Stack | Curriculum', 
-		'desp':'', 
+		'desp':'Project mate is a project collaboration website that allows students from India to work together on a project idea. Created under Web Development Curriculum', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'java', 'postgresql'], 
+		'technologies': ['html', 'css', 'js', 'java', 'postgresql', 'github'], 
 		'github': 'https://github.com/Ray784/Project-Mate', 
 		'deploy': ''
 	},{
 		'title': 'Bits and Bytes', 
-		'subtitle':'Full Stack | JNTUH', 
-		'desp':'', 
+		'subtitle':'Full Stack | Curriculum', 
+		'desp':'Bits and Bytes is intended to create an exploration environment, in which students can learn through and also provide teachers with a good teaching aid. Features such as interview preparation, blogs from college seniors and links to important books are also available.', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'angular', 'nodejs', 'mongodb', 'd3js', 'heroku'], 
+		'technologies': ['html', 'css', 'js', 'angular', 'nodejs', 'mongodb', 'd3js', 'heroku', 'github'], 
 		'github': 'https://github.com/Ray784/bitsandbytes', 
 		'deploy': 'https://bitsandbytes2020.herokuapp.com'
 	},{
 		'title': 'Gate2020 Score Calculator', 
 		'subtitle':'Flask | Scraping', 
-		'desp':'', 
+		'desp':'A web application to calculate the gate score of CSIT - 2020 paper just by giving in the responses url.', 
 		'icon':'',
-		'technologies': ['html', 'css', 'bootstrap', 'python', 'heroku'], 
+		'technologies': ['html', 'css', 'bootstrap', 'python', 'heroku', 'github'], 
 		'github': 'https://github.com/Ray784/Gate2020-Score', 
 		'deploy': 'https://gate-2020.herokuapp.com/'
 	},{
 		'title': 'TS Intermediate first year results 2020 name-wise', 
 		'subtitle':'Flask | Scraping', 
-		'desp':'', 
+		'desp':'A web application to get the results of IPE-TS-1st year 2020 name-wise. The data was scraped from original TS-results website and stored on mongodb.', 
 		'icon':'',
-		'technologies': ['html', 'css', 'bootstrap', 'python', 'heroku'], 
+		'technologies': ['html', 'css', 'bootstrap', 'python', 'heroku', 'github', 'mongodb'], 
 		'github': 'https://github.com/Ray784/ts-inter-data', 
 		'deploy': 'https://tsbie20.herokuapp.com/'
 	},{
 		'title': 'Scraped English words', 
 		'subtitle':'Scraping', 
-		'desp':'', 
+		'desp':'A list of 20,000(appx) most used valid english words scraped from wikipedia.', 
 		'icon':'',
-		'technologies': ['python'], 
+		'technologies': ['python', 'github'], 
 		'github': 'https://github.com/Ray784/english-words', 
 		'deploy': ''
 	},{
 		'title': 'Tic-Tac-Toe', 
 		'subtitle':'Android | AI | Game', 
-		'desp':'', 
+		'desp':'A web app simulating the famous tic-tac-toe(x\'s and o\'s) game in three modes: easy, medium, hard(min-max approach)', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'bootstrap', 'android'], 
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'android', 'github'], 
 		'github': 'https://github.com/Ray784/tic_tac_toe/', 
 		'deploy': 'https://ray784.github.io/tic_tac_toe/'
 	},{
 		'title': 'Calculator', 
 		'subtitle':'Android | JS', 
-		'desp':'', 
+		'desp':'A basic calculator application which uses postfix expression evaluation using a stack.', 
 		'icon':'',
-		'technologies': ['html', 'css', 'js', 'bootstrap', 'android'], 
+		'technologies': ['html', 'css', 'js', 'bootstrap', 'android', 'github'], 
 		'github': 'https://github.com/Ray784/calculator/', 
 		'deploy': 'https://ray784.github.io/calculator/'
 	},{
 		'title': 'Calculator - java', 
 		'subtitle':'Side Project', 
-		'desp':'', 
+		'desp':'An almost scientific calculator application created using Java awt package.', 
 		'icon':'',
-		'technologies': ['java'], 
+		'technologies': ['java','github'], 
 		'github': 'https://github.com/Ray784/java-calculator', 
 		'deploy': ''
 	},{
 		'title': 'Chatbot - Tensorflow', 
-		'subtitle':'NLP | Tensorflow', 
-		'desp':'', 
+		'subtitle':'RNN | Tensorflow', 
+		'desp':'A chat-bot made using recurrent neural networks with the help of Tensorflow module.', 
 		'icon':'',
-		'technologies': ['python'], 
+		'technologies': ['python','github'], 
 		'github': 'https://github.com/Ray784/chatbot', 
 		'deploy': ''
 	},{
 		'title': 'Cryptography Algorithms', 
 		'subtitle':'Cryptography | Curriculum', 
-		'desp':'', 
+		'desp':'Java implementation of popular Cryptography algorithms  such as RSA, Blowfish, Diffie Hellman etc. implemented under the curriculum of Network Security and Cryptography.', 
 		'icon':'',
-		'technologies': ['java'], 
+		'technologies': ['java','github'], 
 		'github': 'https://github.com/Ray784/CryptAlgo', 
 		'deploy': ''
 	},{
 		'title': 'Classification/Clustering Algorithms', 
 		'subtitle':'ML | Curriculum', 
-		'desp':'', 
+		'desp':'Java Implementation of popular Classification/Clustering algorithms such as Kmeans, Kmedoids, Naive Bayes implemented under the curriculum of Data Mining and Data Warehousing.', 
 		'icon':'',
-		'technologies': ['java'], 
+		'technologies': ['java','github'], 
 		'github': 'https://github.com/Ray784/DMDW', 
 		'deploy': ''
 	},{
 		'title': 'Paint', 
 		'subtitle':'Android | Thunkable', 
-		'desp':'', 
+		'desp':'An android application with basic drawing options line, brush, circle, color-picker etc., that helps users to show their creativity without a pen/ paper.', 
 		'icon':'',
-		'technologies': ['android'], 
+		'technologies': ['android','github'], 
 		'github': 'https://github.com/Ray784/paint', 
 		'deploy': 'https://github.com/Ray784/paint/releases'
 	}
 ];
 
-function addProjects(){
-	let projects_length = Math.floor(projects.length / 4);
-	let project_card_container = document.getElementById('project-cards');
-	let column; 
-	for(let i in projects){
-		console.log(i % projects_length == 0 && i > 0);
-		if(i % projects_length == 0){
-			if(column)
-				project_card_container.appendChild(column);
-			column = document.createElement('div');
-			column.classList.add('column')
-		}
-		column.innerHTML += getProjectCard(projects[i]);
+function getProjects(skill){
+	let projectContainer = document.getElementById('project-cards');
+	projectContainer.innerHTML = '';
+	let result = projects.filter(project => project['technologies'].includes(skill));
+	result.sort(function(a, b) {
+		let keyA = a.desp.length + a.title.length;
+		let keyB = b.desp.length + b.title.length;
+		if (keyA < keyB) return -1;
+		if (keyA > keyB) return 1;
+		return 0;
+	});
+	let row = document.createElement('div');
+	row.classList.add('project-row');
+
+	for(let i = 0; i < result.length; i++){
+		row.innerHTML += getProjectCard(result[i]);
 	}
-	project_card_container.appendChild(column);
+
+	projectContainer.appendChild(row);
 }
 
 function getProjectCard(project){
-	let head = `<div class="content medium"><p class="card-text card-title">${project.title}</p>`;
+	let head = `<div class="project-content"><p class="card-text card-title">${project.title}</p>`;
 	let sub_head = `<p class="card-text card-subtitle">${project.subtitle}</p>`;
 	let description = `<p class="card-text">${project.desp}</p>`;
 	let technologies = `<p class="project-skill-container">${getTechnologies(project.technologies)}</p>`;
-	let foot = `</div>`;
-	return head + sub_head + technologies + description + foot;
+	let overlay = `<div class="overlay fade">`;
+	let source = `<a class="source" href ="${project.github}" target = "_blank"><img src="/static/images/projects/github.svg" class="github">Source</a>`;
+	let deploy = `<a class="source" href ="${project.deploy}" target = "_blank"><img src="/static/images/projects/website.png" class="github">Deploy</a>`;
+	let foot = `</div></div>`;
+	if(project.deploy != '')
+		foot = deploy + foot;
+	if(project.github != '')
+		foot = source + foot;
+	return head + sub_head + technologies + description + overlay + foot;
 }
 
 function getTechnologies(technologies){
@@ -345,6 +356,11 @@ function getTechnologies(technologies){
 		technology += `<img src="/static/images/projects/${tech}.svg" class="project-skill">`;
 	}
 	return technology;
+}
+
+function scrollToView(id){
+	let elmnt = document.getElementById(id);
+	elmnt.scrollIntoView();
 }
 
 window.onload = function(){
@@ -369,7 +385,7 @@ window.onload = function(){
 			idx%=portfolios1.length; 
 			shuffle(idx);
 		}, 5000);
-		addProjects();
+		getProjects('github');
 
 		setTimeout(()=>{setUpText("Click to Play");}, 2000);
 		setTimeout(()=>{document.getElementById('song-text').innerHTML = "Now Playing: "+songs[song_idx].name;}, 5000);
