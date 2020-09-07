@@ -641,7 +641,7 @@ p{
 	margin: 16px;
 	border-radius: 16px;
 	flex: 1;
-	flex-basis: calc(30% - 24px);
+	flex-basis: calc(100% - 24px);
 	padding: 16px;
 	text-align: justify;
 	transition: 0.5s;
