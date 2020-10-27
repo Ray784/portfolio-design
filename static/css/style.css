@@ -388,9 +388,13 @@ div {
 	overflow-x: hidden;
 }
 
+
+#about .row{
+	flex: 1;
+}
+
 .row {
 	display: flex;
-	flex: 1;
 	flex-wrap: wrap;
 	padding: 0 8px;
 	cursor: pointer;
