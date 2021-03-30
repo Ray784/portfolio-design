@@ -148,6 +148,10 @@ div {
 	font-weight:500;
 	color: #fcfcfc;
 }
+h1{
+	margin: 0px;
+	padding: 0px;
+}
 
 .title{ 
 	height: 100px;
@@ -156,7 +160,20 @@ div {
 
 .hello{
 	display: block;
+	background-color: none;
 	margin: auto;
+}
+
+.left{
+	text-align: left;
+}
+
+.centered{
+	text-align: center;
+}
+
+.med-height{
+	height: 100px;
 }
 
 .mobile{
