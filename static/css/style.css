@@ -148,10 +148,13 @@ div {
 	font-weight:500;
 	color: #fcfcfc;
 }
-h1{
+h1, h2{
 	margin: 0px;
 	padding: 0px;
+	font-weight: 500;
+	font-size: 1.2em;
 }
+
 
 .title{ 
 	height: 100px;

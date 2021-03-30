@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<!--Header of HTML-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
 	<meta name="description" content="This portfolio page tells you everything about Abhay Bhat who is a software developer with robust problem-solving skills and proven experience in creating and designing softwares currently working for Teradata Corp.">
 	<title>Abhay Bhat</title>
 	<!--linking static files to html-->
@@ -14,15 +13,17 @@
 	<link rel="shortcut icon" href="/static/images/resume.png">
 </head>
 <body class="prebody">
+	<h1 class="hide">Abhay Bhat's Portfolio Page</h1>
 	<!--landing Page-->
 	<div class="body">
 		<section id="head">
+			<h3 class="hide">This is head part.</h3>
 			<!--50% background part-->
 			<div class="part1">
 				<div class="div1 padding" style="">
 					<div class="text main"><span style="color: black;">I am</span><br>Abhay Bhat</div>
 					<div class="text med-height">
-						<h1><span class="title" id="title1"></span> <span class="title left" id="title2"></span></h1>
+						<span class="title" id="title1"></span> <span class="title left" id="title2"></span>
 					</div>
 				</div>
 				<!-- hello SVG-->
@@ -144,13 +145,13 @@
 			</a>
 			<div class="navBar">
 				<a href="#about">
-					<div class="tab" onclick="active(this, 'about')">About</div>
+					<div class="tab" onclick="active(this, 'about')"><h2>About</h2></div>
 				</a>
 				<a href="#projects">
-					<div class="tab" onclick="active(this, 'projects')">Projects &amp; Skills</div>
+					<div class="tab" onclick="active(this, 'projects')"><h2>Projects &amp; Skills</h2></div>
 				</a>
 				<a href="#reach-out">
-					<div class="tab lasttab" onclick="active(this, 'reach-out')">Reach-out</div>
+					<div class="tab lasttab" onclick="active(this, 'reach-out')"><h2>Reach-out</h2></div>
 				</a>
 			</div> 
 			<a class="tab-btn" onclick="scrollDiv(+1)">
@@ -173,7 +174,9 @@
 
 		<!-- Main section of the website, holds navigation container-->
 		<section id="main">
+			<h3 class="hide">This is the Main Page of the website</h3>
 			<section id="about" class="hide">
+					<h3 class="hide">This is about section where you can find information about me.</h3>
 					<div class="row"> 
 						<div class="column">
 							<div class="content long img-content">
@@ -237,6 +240,7 @@
 			</section>
 
 			<section class="hide" id="projects">
+				<h3 class="hide">This is about section where you can find information about my Projects.</h3>
 				<div class="background"></div>
 				<div class="skills-container">
 					<div class="hex-row m1">
@@ -357,6 +361,7 @@
 				</div>
 			</section>
 			<section id="reach-out" class="hide" style="padding: 0;">
+				<h3 class="hide">This is about section where you can find informationon how to reach out to me.</h3>
 				<div class="wrapper" style="flex-direction: column;">
 					<div class="background"></div>
 					<div class="row">
@@ -405,6 +410,7 @@
 		</section>
 	</div>
 	<section class="init">
+		<h3 class="hide">Downloading necessary Images and loading css.</h3>
 		<div id="load_gif">
 			<img src="/static/images/preloader.gif" alt="loading" class="center">
 			<div class="centered">Loading... This might take a while.</div>
@@ -419,6 +425,6 @@
 			</circle>
 		</svg>
 	</section>
-	<script type="text/javascript" src= "static/js/index.js"></script>
+	<script src= "static/js/index.js"></script>
 </body>
 
