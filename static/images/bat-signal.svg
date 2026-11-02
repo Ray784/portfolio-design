@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" width="900" height="680" role="img" aria-label="Bat-Signal projected into the night sky">
+<defs>
+<linearGradient id="beamGrad" gradientUnits="userSpaceOnUse" x1="0" y1="483" x2="0" y2="0">
+<stop offset="0" stop-color="rgb(245, 197, 66)" stop-opacity="0.58"/>
+<stop offset="1" stop-color="rgb(245, 197, 66)" stop-opacity="0.12"/>
+</linearGradient>
+<linearGradient id="beamCore" gradientUnits="userSpaceOnUse" x1="0" y1="483" x2="0" y2="0">
+<stop offset="0" stop-color="rgb(255, 236, 170)" stop-opacity="0.26"/>
+<stop offset="1" stop-color="rgb(245, 197, 66)" stop-opacity="0.10"/>
+</linearGradient>
+<radialGradient id="spotGrad" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0" stop-color="#fff1b8" stop-opacity="0.58"/>
+<stop offset="0.7" stop-color="#f5c542" stop-opacity="0.48"/>
+<stop offset="1" stop-color="#d4af37" stop-opacity="0.36"/>
+</radialGradient>
+<radialGradient id="haloGrad" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0.55" stop-color="#f5c542" stop-opacity="0.22"/>
+<stop offset="1" stop-color="#f5c542" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="flareGrad" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+<stop offset="0.35" stop-color="#fff1b8" stop-opacity="0.85"/>
+<stop offset="1" stop-color="#f5c542" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="shadowRayGrad" gradientUnits="userSpaceOnUse" x1="0" y1="483" x2="0" y2="0">
+<stop offset="0" stop-color="#08090c" stop-opacity="0.18"/>
+<stop offset="1" stop-color="#08090c" stop-opacity="0.32"/>
+</linearGradient>
+<radialGradient id="skyHaloGrad" cx="0.5" cy="0.5" r="0.5">
+<stop offset="0" stop-color="#f5c542" stop-opacity="0.14"/>
+<stop offset="1" stop-color="#f5c542" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<!-- Coaxial projection frame: origin is the cloud spotlight center and +y runs down the beam to the rooftop lens. -->
+<g id="batSignalProjection" transform="translate(320 225) rotate(31.88)" opacity="0.48">
+<!-- Stage 2, the volumetric beam shooting up from the lens. -->
+<g class="bat-stage-beam" id="batStageBeam">
+<polygon points="-16,483 16,483 144.2,8.5 -144.2,8.5" fill="url(#beamGrad)"/>
+<polygon points="-10,483 10,483 108,6 -108,6" fill="url(#beamCore)"/>
+<path d="M-6,483 L6,483 L78,6 L-78,6 Z" fill="url(#shadowRayGrad)"/>
+</g>
+<!-- Stage 3, the cloud glow, spotlight disc and foreshortened emblem. -->
+<g class="bat-stage-signal" id="batStageSignal">
+<ellipse cx="0" cy="0" rx="210" ry="125" fill="url(#skyHaloGrad)"/>
+<ellipse cx="0" cy="0" rx="185" ry="102" fill="url(#haloGrad)"/>
+<ellipse cx="0" cy="0" rx="145" ry="76" fill="url(#spotGrad)"/>
+<g transform="translate(-102 -28.5) scale(0.34 0.21)">
+<g transform="translate(0.000000,271.000000) scale(0.100000,-0.100000)" fill="#08090c" stroke="none">
+<path d="M1575 2703 c-51 -10 -261 -79 -357 -118 -453 -186 -841 -497 -1039
+-837 -94 -161 -161 -364 -163 -497 -1 -95 8 -102 96 -78 164 46 261 60 423 61
+222 1 368 -32 542 -123 150 -78 253 -183 339 -345 27 -52 52 -86 64 -89 11 -3
+44 1 73 9 203 53 459 57 622 10 288 -85 506 -263 745 -608 29 -43 62 -80 72
+-84 26 -8 49 14 119 117 221 323 449 501 743 582 71 19 104 22 266 21 161 -1
+198 -5 290 -27 72 -17 111 -22 123 -16 9 6 29 33 43 62 73 143 158 242 279
+322 261 174 601 217 978 123 96 -23 133 -29 146 -21 38 25 -1 259 -73 424 -75
+175 -166 307 -316 463 -272 281 -650 503 -1059 621 -169 48 -177 39 -63 -75
+179 -177 195 -351 46 -510 -153 -164 -517 -300 -948 -355 -144 -18 -173 -15
+-181 18 -2 12 -23 150 -45 306 -23 157 -43 288 -46 293 -3 4 -14 8 -24 8 -15
+0 -31 -32 -81 -159 l-62 -158 -123 -1 -123 0 -51 130 c-28 72 -58 144 -66 160
+-15 29 -38 37 -50 16 -4 -7 -27 -144 -50 -305 -24 -170 -47 -300 -55 -309 -15
+-18 -73 -15 -254 12 -381 59 -710 188 -858 338 -71 73 -102 144 -102 236 1
+104 39 177 146 281 44 42 79 81 79 87 0 13 -20 19 -45 15z"/>
+</g>
+</g>
+</g>
+<!-- Stage 1, the rooftop searchlight housing, flare and lens. -->
+<g class="bat-stage-source" id="batStageSource">
+<path d="M-20,483 L-14,504 L14,504 L20,483 Z" fill="#1b1d24" stroke="#d4af37" stroke-width="1.5"/>
+<ellipse cx="0" cy="483" rx="34" ry="20" fill="url(#flareGrad)"/>
+<ellipse cx="0" cy="483" rx="16" ry="8" fill="#fff8d6" stroke="#d4af37" stroke-width="1.5"/>
+</g>
+</g>
+</svg>
